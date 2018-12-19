@@ -1,0 +1,12 @@
+{{#each forecast}}
+{{log this}}
+<div class="card" style="width: 18rem;">
+    <h5 class="card-title weekday">{{this.weekday}}</h5>
+    <img class="card-img-top" src={{this.gif}} alt="weather gif">
+    <div class="card-body">
+        <h5 class="card-title">{{this.weather.[0].description}}</h5>
+        <p class="card-text">High: {{this.temp.max}}°</p>
+        <p class="card-text">Low: {{this.temp.min}}°</p>
+    </div>
+</div>
+{{/each}}
